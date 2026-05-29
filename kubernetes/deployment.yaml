@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product-similarity
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: product-similarity
+  template:
+    metadata:
+      labels:
+        app: product-similarity
+    spec:
+      containers:
+        - name: product-similarity
+          image: kalimi03/simple-similarity-search:latest
+          ports:
+            - containerPort: 8000
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: product-similarity-svc
+spec:
+  selector:
+    app: product-similarity
+  ports:
+    - port: 80
+      targetPort: 8000
+  type: LoadBalancer

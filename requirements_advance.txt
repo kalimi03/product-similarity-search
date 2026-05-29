@@ -1,0 +1,10 @@
+numpy==1.26.4
+scipy==1.13.1
+pandas==2.2.3
+fastapi==0.136.3
+scikit-learn==1.5.2
+sentence-transformers==5.5.1
+uvicorn[standard]==0.48.0
+faiss-cpu>=1.7.4
+torch>=2.0.0
+transformers>=4.40.0
