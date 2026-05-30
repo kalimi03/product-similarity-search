@@ -34,7 +34,7 @@ The advance similarity search uses a two-stage pipeline:
 - Python 3.10+
 - Docker Desktop
 - kubectl
-- The dataset file placed inside the `data/` folder
+- The dataset file is placed inside the `data/` folder
 
 ---
 
@@ -43,7 +43,7 @@ The advance similarity search uses a two-stage pipeline:
 **Step 1 — Install dependencies:**
 ```bash
 pip install -r requirements.txt
-or for advance search install below requirements
+Or for advance search, install the below requirements
 pip install -r requirements_advance.txt
 ```
 
@@ -68,6 +68,7 @@ docker build -t simple-similarity-search:latest .
 or
 docker build -t advance-similarity-search:latest .
 
+Note: Dont forget to update requirement.txt file name in docker file.
 ```
 
 ### Run the Container
